@@ -1,10 +1,6 @@
 package com.example.musicplayer.events
 
 import android.view.View
-<<<<<<< HEAD
-import android.widget.ImageView
-=======
->>>>>>> origin/wd
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import com.example.musicplayer.untils.hideBottomNavigationView
@@ -20,9 +16,4 @@ fun View.shouldShow(show:Boolean) {
            hideBottomNavigationView(this)
 
     }
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> origin/wd

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private val model : SharedViewModel by viewModels ()
     var isReadable = false
     var isWritable = false
+    private lateinit var iconfont: Typeface
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -44,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         binding.bottomNavigationView.setupWithNavController(navHostFragment.navController)
-
     }
 
     override fun onResume() {
@@ -91,5 +91,6 @@ class MainActivity : AppCompatActivity() {
         }
         resultLauncher.launch(permissionArray.toTypedArray())
     }
+
 
 }
