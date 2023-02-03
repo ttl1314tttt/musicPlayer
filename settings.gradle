@@ -3,8 +3,6 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-<<<<<<< HEAD
-=======
         maven { url 'https://maven.google.com' }
         maven() {
             url 'https://maven.aliyun.com/repository/jcenter'
@@ -19,7 +17,6 @@ pluginManagement {
             url 'https://maven.aliyun.com/repository/mapr-public'
         }
 
->>>>>>> origin/wd
     }
 }
 dependencyResolutionManagement {
@@ -27,9 +24,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         maven { url 'https://maven.google.com' }
 
         maven() {
@@ -44,10 +38,7 @@ dependencyResolutionManagement {
         maven {
             url 'https://maven.aliyun.com/repository/mapr-public'
         }
->>>>>>> origin/wd
-=======
         maven { url 'https://jitpack.io' }
->>>>>>> chy
     }
 }
 rootProject.name = "MusicPlayer"
