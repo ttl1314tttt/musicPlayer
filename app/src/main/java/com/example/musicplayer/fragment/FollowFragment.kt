@@ -1,12 +1,10 @@
 package com.example.musicplayer.fragment
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.musicplayer.ClickEvent
-import com.example.musicplayer.R
 import com.example.musicplayer.adapter.FollowPagerAdapter
 import com.example.musicplayer.databinding.FragmentFollowBinding
 import com.example.musicplayer.fragment.tabfragment.FollowAllFragment
@@ -23,29 +21,48 @@ class FollowFragment : Fragment {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         binding = FragmentFollowBinding.inflate(layoutInflater, container, false)
-        binding.clickEvent = ClickEvent()
-        return binding.root
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val followPagerAdapter = FollowPagerAdapter(requireActivity().supportFragmentManager,lifecycle)
-        followPagerAdapter.setPageList(
-            listOf(
-                FollowMusicianFragment(),
-                FollowAllFragment(),
-                FollowFriendsFragment()
-            )
-        )
-        binding.followViewpager.adapter = followPagerAdapter
-        TabLayoutMediator(binding.followTableTap,binding.followViewpager){tab,position->
-            when(position){
-                0->tab.text = "音乐人"
-                1->tab.text = "全部"
-                2->tab.text = "朋友"
+        class FollowFragment : Fragment() {
+            private lateinit var binding: FragmentFollowBinding
+            override fun onCreateView(
+                inflater: LayoutInflater, container: ViewGroup?,
+                savedInstanceState: Bundle?
+            ): View? {
+                binding = FragmentFollowBinding.inflate(layoutInflater, container, false)
+                return binding.root
             }
-        }.attach()
-    }
 
+            override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+                val followPagerAdapter =
+                    FollowPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
+                followPagerAdapter.setPageList(
+                    listOf(
+                        FollowMusicianFragment(),
+                        FollowAllFragment(),
+                        FollowFriendsFragment()
+                    )
+                )
+                binding.followViewpager.adapter = followPagerAdapter
+                TabLayoutMediator(
+                    binding.followTableTap,
+                    binding.followViewpager
+                ) { tab, position ->
+                    when (position) {
+                        0 -> tab.text = "音乐人"
+                        1 -> tab.text = "全部"
+                        2 -> tab.text = "朋友"
+                    }
+                }.attach()
+                binding.left.setOnClickListener {
+                    binding.scrollView.closePane()
+                }
+                binding.buttonMain.setOnClickListener {
+                    binding.scrollView.openPane()
+                }
+            }
+
+        }
+    }
 }

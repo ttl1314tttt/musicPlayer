@@ -14,7 +14,6 @@ import com.example.musicplayer.databinding.FragmentSelfBinding
 
 class SelfFragment : Fragment() {
     private lateinit var binding: FragmentSelfBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

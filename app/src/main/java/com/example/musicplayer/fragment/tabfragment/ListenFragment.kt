@@ -1,6 +1,4 @@
 package com.example.musicplayer.fragment.tabfragment
-
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +9,6 @@ import com.example.musicplayer.databinding.FragmentListenBinding
 import com.example.musicplayer.utils.setChipWithEvent
 import com.example.musicplayer.utils.setFirstRecyclerView
 import com.example.musicplayer.viewmodel.ListenViewModel
-
 
 
 class ListenFragment : Fragment() {
@@ -27,12 +24,6 @@ class ListenFragment : Fragment() {
         setFirstRecyclerView(requireActivity(), binding)
 
 
-
-
-
-
         return binding.root
     }
-
-
 }

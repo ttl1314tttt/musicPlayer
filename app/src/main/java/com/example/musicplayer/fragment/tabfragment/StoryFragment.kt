@@ -27,6 +27,3 @@ class StoryFragment : Fragment() {
         return binding.root
     }
 }
-
-
-

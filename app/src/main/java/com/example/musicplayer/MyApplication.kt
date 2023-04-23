@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import cn.leancloud.LeanCloud
 import me.weishu.reflection.Reflection
-
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()

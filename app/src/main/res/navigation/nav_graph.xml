@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/welcomeFragment">
-
     <fragment
         android:id="@+id/findFragment"
         android:name="com.example.musicplayer.fragment.FindFragment"
         android:label="fragment_find"
+<<<<<<< HEAD
         tools:layout="@layout/fragment_find" />
     <fragment
         android:id="@+id/bokeFragment"
@@ -22,6 +22,33 @@
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.example.musicplayer.fragment.community.CommunityFragment"
+=======
+        tools:layout="@layout/fragment_find" >
+        <action
+            android:id="@+id/action_findFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/findtomenu_in"
+            app:exitAnim="@anim/menutofind_out"
+            app:popExitAnim="@anim/menutofind_out" />
+        <action
+            android:id="@+id/action_findFragment_to_songListFragment"
+            app:destination="@id/songListFragment" />
+        <action
+            android:id="@+id/action_findFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_findFragment_to_playerContentFragment"
+            app:destination="@id/playerContentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bokeFragment"
+        android:name="com.example.musicplayer.fragment.BokeFragment"
+        android:label="fragment_boke"
+        tools:layout="@layout/fragment_boke" />
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.musicplayer.fragment.CommunityFragment"
+>>>>>>> newwh
         android:label="fragment_community"
         tools:layout="@layout/fragment_community" />
     <fragment
@@ -29,6 +56,7 @@
         android:name="com.example.musicplayer.fragment.FollowFragment"
         android:label="fragment_follow"
         tools:layout="@layout/fragment_follow" />
+<<<<<<< HEAD
         <action
             android:id="@+id/action_followFragment_to_dongtaiFragment"
             app:destination="@id/dongtaiFragment" />
@@ -37,6 +65,8 @@
             app:destination="@id/editStateFragment" />
 
 
+=======
+>>>>>>> newwh
     <fragment
         android:id="@+id/listenFragment"
         android:name="com.example.musicplayer.fragment.tabfragment.ListenFragment"
@@ -45,6 +75,7 @@
         android:id="@+id/selfFragment"
         android:name="com.example.musicplayer.fragment.SelfFragment"
         android:label="fragment_self"
+<<<<<<< HEAD
         tools:layout="@layout/fragment_self" >
         <action
             android:id="@+id/D"
@@ -84,12 +115,16 @@
             android:id="@+id/three"
             app:destination="@id/uploadFragment" />
     </fragment>
+=======
+        tools:layout="@layout/fragment_self" />
+>>>>>>> newwh
     <fragment
         android:id="@+id/storyFragment"
         android:name="com.example.musicplayer.fragment.tabfragment.StoryFragment"
         android:label="fragment_story"
         tools:layout="@layout/fragment_story" />
     <fragment
+<<<<<<< HEAD
         android:id="@+id/adFragment"
         android:name="com.example.musicplayer.fragment.AdFragment"
         android:label="fragment_ad"
@@ -188,4 +223,92 @@
         android:name="com.example.musicplayer.fragment.bokefragment.SongListFragment"
         android:label="fragment_song_list"
         tools:layout="@layout/fragment_song_list" />
+=======
+        android:id="@+id/menuFragment"
+        android:name="com.example.musicplayer.fragment.slideMenu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_themechangeColorFragment"
+            app:destination="@id/themechangeColorFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_myPrivacyFragment"
+            app:destination="@id/myPrivacyFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_myhelpAndResidentFragment"
+            app:destination="@id/myhelpAndResidentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songListFragment"
+        android:name="com.example.musicplayer.fragment.songListFragment"
+        android:label="fragment_song_list"
+        tools:layout="@layout/fragment_song_list" >
+        <argument
+            android:name="songList"
+            app:argType="com.example.musicplayer.SongList" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.musicplayer.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <argument
+            android:name="search"
+            app:argType="com.example.musicplayer.SearchS" />
+        <action
+            android:id="@+id/action_searchFragment_to_songListFragment"
+            app:destination="@id/songListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/themechangeColorFragment"
+        android:name="com.example.musicplayer.menu.ThemechangeColorFragment"
+        android:label="ThemechangeColorFragment" >
+        <action
+            android:id="@+id/action_themechangeColorFragment_to_themeColorFragment"
+            app:destination="@id/themeColorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.musicplayer.menu.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.example.musicplayer.menu.MyAccountFragment"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account" />
+    <fragment
+        android:id="@+id/myPrivacyFragment"
+        android:name="com.example.musicplayer.menu.MyPrivacyFragment"
+        android:label="fragment_my_privacy"
+        tools:layout="@layout/fragment_my_privacy" />
+    <fragment
+        android:id="@+id/myhelpAndResidentFragment"
+        android:name="com.example.musicplayer.menu.MyhelpAndResidentFragment"
+        android:label="fragment_myhelp_and_resident"
+        tools:layout="@layout/fragment_myhelp_and_resident" />
+    <fragment
+        android:id="@+id/themeColorFragment"
+        android:name="com.example.musicplayer.ThemeColorFragment"
+        android:label="fragment_theme_color"
+        tools:layout="@layout/fragment_theme_color" >
+        <argument
+            android:name="menupicture"
+            app:argType="com.example.musicplayer.menu.menuPicture" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerContentFragment"
+        android:name="com.example.musicplayer.fragment.musicContent.PlayerContentFragment"
+        android:label="PlayerContentFragment" />
+    <fragment
+        android:id="@+id/musicBkwindows"
+        android:name="com.example.musicplayer.fragment.musicContent.MusicBkwindows"
+        android:label="MusicBkwindows" />
+>>>>>>> newwh
 </navigation>
